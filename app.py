@@ -31,6 +31,7 @@ from lang_list import (
 
 user = getpass.getuser() # this is not portable on windows
 CHECKPOINTS_PATH = pathlib.Path(os.getenv("CHECKPOINTS_PATH", f"{pathlib.Path.home()}/models"))
+gr.Warning(f"Models path is {pathlib.Path.home()}/models.")
 if not CHECKPOINTS_PATH.exists():
     snapshot_download(repo_id="facebook/seamless-m4t-v2-large", repo_type="model", local_dir=CHECKPOINTS_PATH)
 asset_store.env_resolvers.clear()
