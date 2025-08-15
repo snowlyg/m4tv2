@@ -20,9 +20,9 @@ COPY ./lang_list.py /app/src/
 COPY ./download.sh /app/src/
 
 # Set permissions for the created directories
-RUN chmod -R 777 /nonexistent /app 
-
+RUN chmod +x /app/src/download.sh
 RUN /app/src/download.sh
+RUN chmod -R 777 /nonexistent /app 
 
 # Install Python dependencies within your Docker image
 RUN pip install -r /app/requirements.txt
