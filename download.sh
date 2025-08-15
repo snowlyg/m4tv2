@@ -11,8 +11,6 @@
 # sentencepiece==0.2.0
 # EOF
 
-cd 
-
 wget https://hf-mirror.com/facebook/seamless-m4t-v2-large/resolve/main/.gitattributes?download=true -O .gitattributes
 wget https://hf-mirror.com/facebook/seamless-m4t-v2-large/resolve/main/README.md?download=true -O README.md
 wget https://hf-mirror.com/facebook/seamless-m4t-v2-large/resolve/main/added_tokens.json?download=true -O added_tokens.json
