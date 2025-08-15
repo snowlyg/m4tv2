@@ -1,4 +1,5 @@
 
+#! /bin/sh
 # git clone https://github.com/facebookresearch/seamless_communication.git /app/src
 
 # cat > /app/src/demo/m4tv2/requirements.txt << 'EOF'
@@ -10,6 +11,8 @@
 # pydub==0.25.1
 # sentencepiece==0.2.0
 # EOF
+
+apt install wget git
 
 wget https://hf-mirror.com/facebook/seamless-m4t-v2-large/resolve/main/.gitattributes?download=true -O .gitattributes
 wget https://hf-mirror.com/facebook/seamless-m4t-v2-large/resolve/main/README.md?download=true -O README.md
