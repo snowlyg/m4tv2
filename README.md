@@ -11,5 +11,5 @@ sudo docker buildx build --build-arg HTTPS_PROXY="http://127.0.0.1:57217" -t sno
 
 ## run docker
 ```bash
-sudo docker run --user nobody -p 8000:8000 -d snowlyg/seamless_communication
+sudo docker run --name seamless_communication --user nobody -p 8000:8000 -d snowlyg/seamless_communication
 ```
