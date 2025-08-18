@@ -7,12 +7,12 @@
 ## build docker
 
 ```bash
-sudo docker buildx build --build-arg HTTPS_PROXY="http://127.0.0.1:57217" -t snowlyg/seamless_communication .
+sudo docker buildx build --build-arg HTTPS_PROXY="http://192.168.20.19:57217" -t seamless_communication .
 ```
 
 ## run docker
 ```bash
-sudo docker run --name seamless_communication -e GRADIO_SERVER_NAME="0.0.0.0" -e HTTPS_PROXY="http://127.0.0.1:57217" -p 7860:7860 -d snowlyg/seamless_communication
+sudo docker run --name seamless_communication -e CHECKPOINTS_PATH="/root/models" -e GRADIO_SERVER_NAME="0.0.0.0" -e HTTPS_PROXY="http://192.168.20.19:57217" -p 7860:7860 -d seamless_communication
 ```
 
 ## open web

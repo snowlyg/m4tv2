@@ -1,4 +1,3 @@
-# m4t_translate.py
 import asyncio
 import logging
 import wave

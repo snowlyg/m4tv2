@@ -1,18 +1,12 @@
 
 #! /bin/sh
-# git clone https://github.com/facebookresearch/seamless_communication.git /app/src
-
-# cat > /app/src/demo/m4tv2/requirements.txt << 'EOF'
-# git+https://github.com/facebookresearch/seamless_communication.git
-# fairseq2==0.2.0
-# gradio==4.21.0
-# httpx==0.27.0
-# omegaconf==2.3.0
-# pydub==0.25.1
-# sentencepiece==0.2.0
-# EOF
-
 apt install wget git
+cd /app
+git clone https://github.com/facebookresearch/seamless_communication.git 
+cd seamless_communication
+pip install .
+cd demo/m4tv2
+pip install -r requirements.txt
 
 wget https://hf-mirror.com/facebook/seamless-m4t-v2-large/resolve/main/.gitattributes?download=true -O /root/models/.gitattributes
 wget https://hf-mirror.com/facebook/seamless-m4t-v2-large/resolve/main/README.md?download=true -O /root/models/README.md
