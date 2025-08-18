@@ -17,3 +17,5 @@ sudo docker run --name seamless_communication -e CHECKPOINTS_PATH="/root/models"
 
 ## open web
 [http://localhost:7860](http://localhost:7860)
+
+docker run --privileged -itd --name agent -v /Users/rodin/workplace/python/agent:/root/agent:rw --platform linux/amd64 ubuntu:20.04

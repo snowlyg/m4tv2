@@ -1,5 +1,7 @@
-# Set base image (host OS)
 FROM python:3.11.8
+
+# RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
+# ADD sources.list /etc/apt/sources.list
 
 # Set environment variables for Matplotlib and Fontconfig cache directories
 ENV MPLCONFIGDIR=/app/matplotlib_cache
