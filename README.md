@@ -27,3 +27,12 @@ sudo docker run --gpus all --name seamless_communication -e CHECKPOINTS_PATH="/r
 ```bash
 docker run --privileged -itd --name agent -v /Users/rodin/workplace/python/agent:/root/agent:rw --platform linux/amd64 ubuntu:20.04
 ```
+
+### 問題
+
+pydantic.errors.PydanticSchemaGenerationError: Unable to generate pydantic-core schema for <class 'starlette.requests.Request'>. Set `arbitrary_types_allowed=True` in the model_config to ignore this error or implement `__get_pydantic_core_schema__` on your type to fully support it.
+
+```bash
+# 修復报错
+pip install fastapi==0.111.0
+```

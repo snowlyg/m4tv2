@@ -76,7 +76,8 @@ class M4tTranslate(stt.STT):
         # data = io_buffer.getvalue()
         text = ""
         try:
-            text = self.client.predict(handle_file(filename), "Mandarin Chinese", "English", api_name="/s2tt")
+            text = self.client.predict(handle_file(filename), "Mandarin Chinese", "Mandarin Chinese", api_name="/s2tt")
+            # text = self.client.predict(handle_file(filename), "Mandarin Chinese", "English", api_name="/s2tt")
             # text = self.client.predict(handle_file(filename), "Cantonese", "English", api_name="/s2tt")
         except Exception as e:
             logger.exception(f"Exception {e} when calling m4t")
