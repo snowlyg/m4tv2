@@ -7,7 +7,7 @@ FROM python:3.13
 # Set environment variables for Matplotlib and Fontconfig cache directories
 ENV MPLCONFIGDIR=/app/matplotlib_cache
 ENV FONTCONFIG_PATH=/app/fontconfig
-ENV GRADIO_SERVER_NAME="0.0.0.0"
+ENV CHECKPOINTS_PATH=/root/models
 
 ENV HTTP_PROXY=""
 ENV HTTPS_PROXY=""
