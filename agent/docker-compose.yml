@@ -1,0 +1,18 @@
+version: "3.1"
+services:
+  m4tv2:
+    build: 
+      context: ./
+    container_name: m4tv2
+    ports:
+      - 7860:7860
+    # volumes:
+    #   - ./volumes/checkpoints:/opt/fish-speech/checkpoints
+    #   - ./volumes/references:/opt/fish-speech/references
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

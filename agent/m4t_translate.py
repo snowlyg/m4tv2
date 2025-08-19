@@ -19,6 +19,7 @@ from livekit.agents.stt import StreamAdapter
 from livekit.agents.utils import AudioBuffer
 from gradio_client import Client
 from gradio_client import handle_file
+from livekit.agents.types import DEFAULT_API_CONNECT_OPTIONS, APIConnectOptions
 import tempfile
 
 load_dotenv()
@@ -57,8 +58,9 @@ class M4tTranslate(stt.STT):
             )
         )
     
-    async def recognize(
-        self, buffer: AudioBuffer, *, language: str | None = None
+    async def _recognize_impl(
+        self, buffer: AudioBuffer, *, language: str | None = None,
+         conn_options: APIConnectOptions = DEFAULT_API_CONNECT_OPTIONS,
     ) -> stt.SpeechEvent:
         
         # io_buffer = io.BytesIO()
@@ -75,6 +77,7 @@ class M4tTranslate(stt.STT):
         text = ""
         try:
             text = self.client.predict(handle_file(filename), "Mandarin Chinese", "English", api_name="/s2tt")
+            # text = self.client.predict(handle_file(filename), "Cantonese", "English", api_name="/s2tt")
         except Exception as e:
             logger.exception(f"Exception {e} when calling m4t")
 

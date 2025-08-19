@@ -13,6 +13,7 @@ sudo docker buildx build --build-arg HTTPS_PROXY="http://192.168.20.19:57217" -t
 ## run docker
 ```bash
 sudo docker run --name seamless_communication -e CHECKPOINTS_PATH="/root/models" -e GRADIO_SERVER_NAME="0.0.0.0" -e HTTPS_PROXY="http://192.168.20.19:57217" -p 7860:7860 -d seamless_communication
+sudo docker run --gpus all --name seamless_communication -e CHECKPOINTS_PATH="/root/models" -e GRADIO_SERVER_NAME="0.0.0.0" -p 7860:7860 -d seamless_communication
 ```
 
 ## open web

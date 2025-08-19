@@ -1,14 +1,17 @@
 
 #! /bin/sh
 mkdir -p /root/models
+
 apt update·
 apt install wget git  build-essential -y
+
 cd /app
 git clone https://github.com/facebookresearch/seamless_communication.git 
 cd seamless_communication
-pip install . -i https://mirrors.ustc.edu.cn/pypi/simple
+
+pip install . -i https://pypi.tuna.tsinghua.edu.cn/simple/
 cd demo/m4tv2
-pip install -r requirements.txt -i https://mirrors.ustc.edu.cn/pypi/simple
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
 wget https://hf-mirror.com/facebook/seamless-m4t-v2-large/resolve/main/.gitattributes?download=true -q -O /root/models/.gitattributes
 wget https://hf-mirror.com/facebook/seamless-m4t-v2-large/resolve/main/README.md?download=true -q  -O /root/models/README.md
