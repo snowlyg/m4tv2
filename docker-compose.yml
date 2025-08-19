@@ -9,9 +9,8 @@ services:
     #   - GRADIO_SERVER_NAME=0.0.0.0
     ports:
       - 7860:7860
-    # volumes:
-    #   - ./volumes/checkpoints:/opt/fish-speech/checkpoints
-    #   - ./volumes/references:/opt/fish-speech/references
+    volumes:
+      - ./models:/root/models
     deploy:
       resources:
         reservations:
