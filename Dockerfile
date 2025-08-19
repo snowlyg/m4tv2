@@ -1,5 +1,5 @@
 
-FROM python:3.11
+FROM python:3.11.8
 
 # RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
 # ADD sources.list /etc/apt/sources.list
@@ -10,9 +10,9 @@ ENV FONTCONFIG_PATH=/app/fontconfig
 ENV CHECKPOINTS_PATH=/root/models
 ENV GRADIO_SERVER_NAME="0.0.0.0"
 
-ENV HTTP_PROXY=""
-ENV HTTPS_PROXY=""
-ENV NO_PROXY="localhost,127.0.0.1"
+# ENV HTTP_PROXY=""
+# ENV HTTPS_PROXY=""
+# ENV NO_PROXY="localhost,127.0.0.1"
 
 # Create the necessary directories within your Docker image
 RUN mkdir -p /app /root/models /app/matplotlib_cache /app/fontconfig  
