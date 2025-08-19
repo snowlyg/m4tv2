@@ -2,7 +2,7 @@
 #! /bin/sh
 mkdir -p /root/models
 
-apt update·
+apt update
 apt install wget git  build-essential -y
 
 cd /app
