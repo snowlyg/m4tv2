@@ -4,6 +4,9 @@ services:
     build: 
       context: ./
     container_name: m4tv2
+    environment:
+      - CHECKPOINTS_PATH="/root/models"
+      - GRADIO_SERVER_NAME="0.0.0.0"
     ports:
       - 7860:7860
     # volumes:
