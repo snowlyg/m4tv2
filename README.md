@@ -1,13 +1,8 @@
 # m4tv2
 
-need python3.10 
+## requirement
+- python3.10+
 
-[Deployment of Seamless M4T v2 models on SAP AI Core](https://community.sap.com/t5/technology-blog-posts-by-sap/deployment-of-seamless-m4t-v2-models-on-sap-ai-core/ba-p/13680013)
-[使用 WebRTC 构建实时 AI 助手](https://aws.amazon.com/cn/blogs/china/building-a-real-time-ai-assistant-with-webrtc/)
-[seamless-m4t-v2-large](https://huggingface.co/spaces/facebook/seamless-m4t-v2-large/blob/main/Dockerfile)
-[Seamless Tutorial](https://colab.research.google.com/github/kauterry/seamless_communication/blob/main/Seamless_Tutorial.ipynb)
-[Seamless M4T_v2 部署](https://blog.csdn.net/qiandaoxc/article/details/136715795)
-[SeamlessM4TApp](https://github.com/Czj1997-02/SeamlessM4TApp/blob/main/Readme2.md)
 
 ## build docker
 
@@ -36,3 +31,11 @@ pydantic.errors.PydanticSchemaGenerationError: Unable to generate pydantic-core 
 # 修復报错
 pip install fastapi==0.111.0
 ```
+
+### 参考
+- [Deployment of Seamless M4T v2 models on SAP AI Core](https://community.sap.com/t5/technology-blog-posts-by-sap/deployment-of-seamless-m4t-v2-models-on-sap-ai-core/ba-p/13680013)
+- [使用 WebRTC 构建实时 AI 助手](https://aws.amazon.com/cn/blogs/china/building-a-real-time-ai-assistant-with-webrtc/)
+- [seamless-m4t-v2-large](https://huggingface.co/spaces/facebook/seamless-m4t-v2-large/blob/main/Dockerfile)
+- [Seamless Tutorial](https://colab.research.google.com/github/kauterry/seamless_communication/blob/main/Seamless_Tutorial.ipynb)
+- [Seamless M4T_v2 部署](https://blog.csdn.net/qiandaoxc/article/details/136715795)
+- [SeamlessM4TApp](https://github.com/Czj1997-02/SeamlessM4TApp/blob/main/Readme2.md)
