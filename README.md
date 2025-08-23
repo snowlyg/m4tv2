@@ -20,7 +20,7 @@ sudo docker run --gpus all --name seamless_communication -e CHECKPOINTS_PATH="/r
 [http://localhost:7860](http://localhost:7860)
 
 ```bash
-docker run --privileged -itd --name agent -v /Users/rodin/workplace/python/agent:/root/agent:rw --platform linux/amd64 ubuntu:20.04
+docker run --privileged -itd --gpus all --name m4tv2 -e CHECKPOINTS_PATH="/root/models" -e GRADIO_SERVER_NAME="0.0.0.0" -p 7860:7860 python:3.11
 ```
 
 ### 問題

@@ -7,16 +7,16 @@ services:
     environment:
       - CHECKPOINTS_PATH=/home/root/app/models
       - GRADIO_SERVER_NAME=0.0.0.0
-      - https_proxy=http://127.0.0.1:7777
+      # - https_proxy=http://127.0.0.1:7777
     ports:
       - 7860:7860
     volumes:
       - ./models:/home/root/app/models:rw
-      - ./seamless_communication:/app/seamless_communication:rw
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
+      - ./seamless_communication:/home/seamless_communication:rw
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
