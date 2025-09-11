@@ -25,11 +25,16 @@ docker run --privileged -itd --gpus all --name m4tv2 -e CHECKPOINTS_PATH="/root/
 
 ### 問題
 
-pydantic.errors.PydanticSchemaGenerationError: Unable to generate pydantic-core schema for <class 'starlette.requests.Request'>. Set `arbitrary_types_allowed=True` in the model_config to ignore this error or implement `__get_pydantic_core_schema__` on your type to fully support it.
+- pydantic.errors.PydanticSchemaGenerationError: Unable to generate pydantic-core schema for <class 'starlette.requests.Request'>. Set `arbitrary_types_allowed=True` in the model_config to ignore this error or implement `__get_pydantic_core_schema__` on your type to fully support it.
 
 ```bash
 # 修復报错
 pip install fastapi==0.111.0
+```
+-  raise RuntimeError(f"Couldn't find appropriate backend to handle uri {uri} and format {format}.") RuntimeError: Couldn't find appropriate backend to handle uri /tmp/gradio/8bf0cef55e1795916f0a4381a102cdd1da397c21/test.wav and format None.
+```bash
+# 增加音频处理格式
+sudo apt update && sudo apt install ffmpeg
 ```
 
 ### 参考
