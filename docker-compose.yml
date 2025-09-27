@@ -1,8 +1,7 @@
 version: "3.1"
 services:
   m4tv2:
-    build: 
-      context: ./
+    image: snowlyg/seamless_communication
     container_name: m4tv2
     environment:
       - CHECKPOINTS_PATH=/home/root/app/models
